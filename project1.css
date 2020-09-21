@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    font-family: 'Merienda', cursive;
+    line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+/* This makes the links not have an underline. */
+    color: #4b5163;
+}
+
+h1{
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.Main{
+    position: relative;
+    height: 100vh;
+    /* VH determines the height, VW the width, based on a % of the viewport. */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0, 20px;
+}
+
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4b5163;
+    background-image: url('cover.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.content{
+    z-index: 5;
+    text-align: center;
+    color: white;
+}
+
+.video-container video{
+    min-width: 100%;
+    min-height:100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.video-container::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(20, 20, 20, .5);
+    
+}
+
+.click{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 30px;
+    background-color: #4b5163;
+    color: whitesmoke;
+    border: 2px whitesmoke solid;
+    border-radius: 10px;
+    opacity: .8px;
+    font-size: 20px;
+
+}
+
+.click:hover{
+    transform: scale(.95);
+
+}
+
+#about{
+    padding: 50px;
+    text-align: center;
+}
+
+#about p{
+    font-size: 20px;
+    max-width: 500px;
+    margin: auto;
+
+}
+
+#about h2{
+    margin: 40px 0px;
+    color: #4b5163;
+
+}
+
+.fab{
+    margin: 0 5px;
+
+}
